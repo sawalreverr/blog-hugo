@@ -1,0 +1,90 @@
+baseURL: "https://arkalim.netlify.app"
+languageCode: en-us
+title: Rever Cyber
+theme: PaperMod
+
+permalinks:
+  blog: /:slug/
+  
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /blog
+      weight: 20
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 60
+    # - identifier: notes
+    #   name: Notes
+    #   url: https://notes.arkalim.org
+    #   weight: 70
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Rever Cyber"
+    subtitle: revercyber.my.id is a Starter Technology Platform. Here we will only provide you with interesting content, which you will really like. We are dedicated to bringing you the best Technology, with a focus on dependability and Portfolio. We are working to turn our passion for Technology into a fast growing online website. We hope you enjoy our Technology as much as we enjoy offering it to you.I will continue to post more important posts on my Website for all of you. Please give your support and love.
+    imageUrl: "home/wkwk.jpg"
+    imageWidth: 220
+    imageHeight: 220
+    # buttons:
+    #   - name: Resume
+    #     url: ""
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "#"
+    - name: "linkedin"
+      url: "#"
+    - name: "github"
+      url: "#"
+    - name: "youtube"
+      url: "#"
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
